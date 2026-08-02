@@ -64,7 +64,7 @@ const mainNavItems: NavItem[] = [
         title: 'Faq',
         href: faq(),
         icon: LayoutGrid,
-    },
+    }
 ];
 
 const rightNavItems: NavItem[] = [

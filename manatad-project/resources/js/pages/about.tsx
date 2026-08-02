@@ -7,7 +7,6 @@ export default function About() {
         <>
             <Head title="About" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vel eius atque obcaecati natus rerum repudiandae enim, eos perspiciatis officia, quis iste sed tempora doloribus nisi dolorem saepe numquam laboriosam?</p>
-
         </>
     );
 }
