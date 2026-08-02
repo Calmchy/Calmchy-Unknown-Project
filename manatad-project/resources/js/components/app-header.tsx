@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
+import { BookOpen, FileQuestionIcon, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -32,7 +32,7 @@ import { UserMenuContent } from '@/components/user-menu-content';
 import { useCurrentUrl } from '@/hooks/use-current-url';
 import { useInitials } from '@/hooks/use-initials';
 import { cn, toUrl } from '@/lib/utils';
-import { dashboard } from '@/routes';
+import { dashboard, about, contactus, announcement, faq } from '@/routes';
 import type { BreadcrumbItem, NavItem } from '@/types';
 
 type Props = {
@@ -43,6 +43,26 @@ const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: dashboard(),
+        icon: LayoutGrid,
+    },
+    {
+        title: 'About',
+        href: about(),
+        icon: FileQuestionIcon,
+    },
+    {
+        title: 'Announcement',
+        href: announcement(),
+        icon: Folder,
+    },
+    {
+        title: 'Contactus',
+        href: contactus(),
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Faq',
+        href: faq(),
         icon: LayoutGrid,
     },
 ];
