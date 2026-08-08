@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Contact, FileQuestionIcon, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
+import { BookOpen, Contact, FileQuestionIcon, Folder, LayoutGrid, Menu, Search, Home, Info, FolderDot, School, BookA, BookOpenText } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -32,7 +32,7 @@ import { UserMenuContent } from '@/components/user-menu-content';
 import { useCurrentUrl } from '@/hooks/use-current-url';
 import { useInitials } from '@/hooks/use-initials';
 import { cn, toUrl } from '@/lib/utils';
-import { dashboard, about, contactus, announcement, faq } from '@/routes';
+import { dashboard, about, admission, academe, studentsalumni, researchextension } from '@/routes';
 import type { BreadcrumbItem, NavItem } from '@/types';
 
 type Props = {
@@ -41,29 +41,34 @@ type Props = {
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'Home',
         href: dashboard(),
-        icon: LayoutGrid,
+        icon: Home,
     },
     {
         title: 'About',
         href: about(),
-        icon: FileQuestionIcon,
+        icon: Info,
     },
     {
-        title: 'Announcement',
-        href: announcement(),
-        icon: Folder,
+        title: 'Admission',
+        href: admission(),
+        icon: FolderDot,
     },
     {
-        title: 'Contactus',
-        href: contactus(),
-        icon: Contact,
+        title: 'Academe',
+        href: academe(),
+        icon: School,
     },
     {
-        title: 'Faq',
-        href: faq(),
-        icon: BookOpen,
+        title: 'Students Alumni',
+        href: studentsalumni(),
+        icon: BookA,
+    },
+    {
+        title: 'Research and Extension',
+        href: researchextension(),
+        icon: BookOpenText,
     }
 ];
 

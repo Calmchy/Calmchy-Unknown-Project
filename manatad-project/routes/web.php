@@ -7,9 +7,10 @@ Route::inertia('/', 'welcome')->name('home');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
     Route::inertia('/about', 'about')->name('about');
-    Route::inertia('/announcement', 'announcement')->name('announcement');
-    Route::inertia('/contactus', 'contactus')->name('contactus');
-    Route::inertia('/faq', 'faq')->name('faq');
+    Route::inertia('/admission', 'admission')->name('admission');
+    Route::inertia('/academe', 'academe')->name('academe');
+    Route::inertia('/studentsalumni', 'studentsalumni')->name('studentsalumni');
+    Route::inertia('/researchextension', 'researchextension')->name('researchextension');
 });
 
 require __DIR__.'/settings.php';
