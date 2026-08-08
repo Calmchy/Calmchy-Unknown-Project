@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { BookOpen, Contact, FileQuestionIcon, Folder, FolderGit2, LayoutGrid } from 'lucide-react';
+import { FolderGit2, BookOpen, Folder, Menu, Search, Home, Info, FolderDot, School, BookA, BookOpenText } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
@@ -13,36 +13,42 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard, about, contactus, announcement, faq } from '@/routes';
+import { dashboard, about, admission, academe, studentsalumni, researchextension } from '@/routes';
 import type { NavItem } from '@/types';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'Home',
         href: dashboard(),
-        icon: LayoutGrid,
+        icon: Home,
     },
     {
         title: 'About',
         href: about(),
-        icon: FileQuestionIcon,
+        icon: Info,
     },
     {
-        title: 'Announcement',
-        href: announcement(),
-        icon: Folder,
+        title: 'Admission',
+        href: admission(),
+        icon: FolderDot,
     },
     {
-        title: 'Contactus',
-        href: contactus(),
-        icon: Contact,
+        title: 'Academe',
+        href: academe(),
+        icon: School,
     },
     {
-        title: 'Faq',
-        href: faq(),
-        icon: BookOpen,
+        title: 'Students Alumni',
+        href: studentsalumni(),
+        icon: BookA,
+    },
+    {
+        title: 'Research and Extension',
+        href: researchextension(),
+        icon: BookOpenText,
     }
 ];
+
 
 const footerNavItems: NavItem[] = [
     {
